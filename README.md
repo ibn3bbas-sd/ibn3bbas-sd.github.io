@@ -24,7 +24,7 @@ A professional, animated digital contact card built with pure HTML, CSS, and Jav
 | File | Description |
 |------|-------------|
 | `index.html` | The contact card — all HTML, CSS, and JS in one file |
-| `sahil-signature-qr.png` | Branded QR code used in the email signature |
+| `ibnabbas-signature-qr.png` | Branded QR code used in the email signature |
 
 ---
 
