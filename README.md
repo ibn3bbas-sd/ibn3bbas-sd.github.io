@@ -1,5 +1,3 @@
-# ibn3bbas-sd.github.io
-My ID Card
 <!DOCTYPE html>
 <html lang="en">
 <head>
