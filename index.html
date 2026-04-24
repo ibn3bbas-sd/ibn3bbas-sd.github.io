@@ -94,6 +94,7 @@
   .g3{background:linear-gradient(135deg,#0a2e8f,#1655c8)}
   .g4{background:linear-gradient(135deg,#163580,#2060d0)}
   .g5{background:linear-gradient(135deg,#0d3090,#1a52c0)}
+  .g6{background:linear-gradient(135deg,#0d6e3a,#1aaa5a)}
   .lbl { font-size:9px; color:rgba(140,180,255,0.7); text-transform:uppercase; letter-spacing:.7px; margin-bottom:3px; }
   .val { font-size:12.5px; color:rgba(210,230,255,0.92); font-weight:600; line-height:1.5; }
   .val a { color:#7ab4ff; text-decoration:none; transition:color .2s; }
@@ -141,9 +142,10 @@
   }
   .social-icon:hover .tooltip { opacity:1; }
 
+  .si-phone    { background:linear-gradient(135deg,#128c7e,#25d366); }
   .si-linkedin { background:linear-gradient(135deg,#0077b5,#0a66c2); }
   .si-github   { background:linear-gradient(135deg,#161b22,#2d333b); }
-  .si-x        { background:linear-gradient(135deg,#000,#1a1a1a); }
+  .si-x        { background:linear-gradient(135deg,#2a2a2a,#505050); border-color:rgba(255,255,255,0.2); }
   .si-tiktok   { background:linear-gradient(135deg,#010101,#1a1a1a); }
   .si-youtube  { background:linear-gradient(135deg,#c4302b,#ff0000); }
   .si-instagram{ background:linear-gradient(135deg,#833ab4,#fd1d1d,#fcb045); }
@@ -157,10 +159,11 @@
     display:flex; align-items:center; gap:20px;
   }
   .qr-img {
-    width:90px; height:90px; border-radius:10px;
+    width:120px; height:120px; border-radius:12px;
     border:2px solid rgba(100,160,255,0.3);
-    background:#fff;
+    background:#fff; padding:4px;
     flex-shrink:0; display:block;
+    object-fit:contain;
   }
   .qr-text { flex:1; }
   .qr-title { color:rgba(210,230,255,0.9); font-size:12px; font-weight:600; margin-bottom:4px; }
@@ -212,12 +215,13 @@
   .item:nth-child(7){animation:popIn .4s ease .72s both}
 
   .social-icon:nth-child(1){animation:popIn .35s ease .40s both}
-  .social-icon:nth-child(2){animation:popIn .35s ease .46s both}
-  .social-icon:nth-child(3){animation:popIn .35s ease .52s both}
-  .social-icon:nth-child(4){animation:popIn .35s ease .58s both}
-  .social-icon:nth-child(5){animation:popIn .35s ease .64s both}
-  .social-icon:nth-child(6){animation:popIn .35s ease .70s both}
-  .social-icon:nth-child(7){animation:popIn .35s ease .76s both}
+  .social-icon:nth-child(2){animation:popIn .35s ease .44s both}
+  .social-icon:nth-child(3){animation:popIn .35s ease .48s both}
+  .social-icon:nth-child(4){animation:popIn .35s ease .52s both}
+  .social-icon:nth-child(5){animation:popIn .35s ease .56s both}
+  .social-icon:nth-child(6){animation:popIn .35s ease .60s both}
+  .social-icon:nth-child(7){animation:popIn .35s ease .64s both}
+  .social-icon:nth-child(8){animation:popIn .35s ease .68s both}
 
   @media print {
     * { -webkit-print-color-adjust:exact; print-color-adjust:exact; }
@@ -242,6 +246,7 @@
     .social-icons { gap:10px; }
     .social-icon { width:42px; height:42px; font-size:17px; }
     .qr-section { padding:16px 14px; }
+    .qr-img { width:100px; height:100px; }
     .btn-row { padding:16px 14px 32px; }
     .btn { width:100%; padding:13px; border-radius:14px; font-size:14px; }
     .toast { width:80%; text-align:center; }
@@ -265,11 +270,11 @@
   <div class="body">
     <div class="grid">
 
-      <div class="item">
-        <div class="ic g1"><i class="fas fa-phone"></i></div>
+      <div class="item full">
+        <div class="ic g6"><i class="fas fa-certificate"></i></div>
         <div>
-          <div class="lbl">Phone </div>
-          <div class="val">+966-534900507 <span class="save-tag" onclick="saveContact('KSA')">💾 Save</span></div>
+          <div class="lbl">Expertise &amp; Certifications</div>
+          <div class="val">DevOps Engineer | Multi-Cloud Architecture | 5x Microsoft | 6x Oracle | 1x Kubernetes | Azure DevOps | Jenkins | GitHub | Terraform | Ansible | FinTech | Solving Complex Challenges</div>
         </div>
       </div>
 
@@ -310,8 +315,13 @@
 
   <!-- Social Icons Section -->
   <div class="social-section">
-    <div class="social-label">Connect on Social Media</div>
+    <div class="social-label">Connect</div>
     <div class="social-icons">
+
+      <a href="tel:+966534900507" class="social-icon si-phone">
+        <i class="fas fa-phone"></i>
+        <span class="tooltip">Call</span>
+      </a>
 
       <a href="https://www.linkedin.com/in/ibn-abbas-mohammed-elhadi-612868140" target="_blank" class="social-icon si-linkedin">
         <i class="fab fa-linkedin-in"></i>
@@ -352,7 +362,7 @@
   </div>
 
   <div class="qr-section">
-    <img class="qr-img" src="data:image/png;base64,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" alt="QR Code – Ibn Abbas Contact Card" />
+    <img class="qr-img" src="ibnabbas-signature-qr.png" alt="QR Code – Ibn Abbas Contact Card" />
     <div class="qr-text">
       <div class="qr-title">📱 Scan to save contact</div>
       <div class="qr-sub">Scan this QR code to open the digital contact card on any device. Works in any camera app.</div>
